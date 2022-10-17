@@ -33,7 +33,7 @@ fn cloud_start(req: Request) -> Result<Response> {
         confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
         }, 250); 
     </script>
-    <body style=\"background-color: #f7f4f8;\">
+    <body style=\"background-color: #f7f4f8; height: 100%;\">
         <div style=\"
             left: 0;
             margin-top: -100px;
@@ -60,7 +60,7 @@ fn cloud_start(req: Request) -> Result<Response> {
                 font-size: 16px;
                 font-family: Sen,Europa,Avenir,system,-apple-system,'.SFNSText-Regular',San Francisco,Segoe UI,Helvetica Neue,Lucida Grande,sans-serif;
             \">
-                Congratulations! Your first Spin Application, powered by WebAssembly, just got deployed
+                Congratulations! Your first Spin Application &mdash; powered by WebAssembly &mdash; is ready to go!
         </div>
         <div style=\"
             position: absolute;
