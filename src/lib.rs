@@ -77,7 +77,7 @@ fn cloud_start(req: Request) -> Result<Response> {
             \">
                 Confetti provided by https://github.com/catdad/canvas-confetti
             </p>
-        </div    
+        </div>
     </body>
     </html>";
 
