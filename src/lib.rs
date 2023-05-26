@@ -58,13 +58,17 @@ fn cloud_start(req: Request) -> Result<Response> {
                 <path d=\"M98.0913 30.5662C99.2289 30.5662 100.227 30.8 101.085 31.2676C101.944 31.7351 102.609 32.3876 103.081 33.2249C103.564 34.0621 103.806 35.0462 103.806 36.1771C103.806 37.2536 103.58 38.2322 103.13 39.113C102.679 39.9829 102.035 40.6734 101.198 41.1845C100.361 41.6955 99.363 41.9511 98.204 41.9511C97.4635 41.9511 96.7231 41.913 95.9826 41.8369C95.2529 41.7608 94.5607 41.6575 93.9061 41.527V30.9903C94.5714 30.8816 95.2529 30.7837 95.9504 30.6967C96.6479 30.6097 97.3616 30.5662 98.0913 30.5662ZM98.1396 32.6866C97.8177 32.6866 97.4796 32.7029 97.1255 32.7355C96.7714 32.7682 96.4441 32.8117 96.1436 32.866V39.6513C96.4655 39.7165 96.7982 39.7654 97.1416 39.7981C97.4957 39.8198 97.8284 39.8307 98.1396 39.8307C98.8479 39.8307 99.4542 39.6784 99.9586 39.374C100.463 39.0586 100.849 38.6291 101.118 38.0854C101.386 37.5417 101.52 36.9328 101.52 36.2586C101.52 35.5627 101.386 34.9484 101.118 34.4155C100.849 33.8827 100.463 33.4641 99.9586 33.1596C99.4542 32.8443 98.8479 32.6866 98.1396 32.6866Z\" fill=\"#34E8BD\"/>
             </svg>
             </a>
-            <p style=\"color: #848fa8;
+            <div style=\"color: #848fa8;
                 font-size: 16px;
                 font-family: Sen,Europa,Avenir,system,-apple-system,'.SFNSText-Regular',San Francisco,Segoe UI,Helvetica Neue,Lucida Grande,sans-serif;
             \">
-                Congratulations! Your first Spin Application &mdash; powered by WebAssembly &mdash; is ready to go!
-                </p>
-                <p><a style=\"font-size:16px;color:#848fa8;font-family: Sen,Europa,Avenir,system,-apple-system,'.SFNSText-Regular',San Francisco,Segoe UI,Helvetica Neue,Lucida Grande,sans-serif;\" href=\"https://developer.fermyon.com\" target=\"_blank\">Learn more about Spin and Fermyon Cloud!</a></p>
+            <p>
+                Congratulations! Your first Spin Application, powered by WebAssembly, just got deployed
+            </p>
+            <p>
+                To edit this app, you'll need Rust and wasm32-wasi targets installed. See instructions <a href=\"https://developer.fermyon.com/spin/rust-components#install-the-tools\">here</a>
+            </p>
+            </div>
         </div>
         <div style=\"
             position: absolute;
