@@ -1,14 +1,16 @@
-spin_version = "1"
+spin_manifest_version = 2
+
+[application]
+name = "cloud_start"
+version = "0.1.0"
 authors = ["Fermyon Engineering <engineering@fermyon.com>"]
 description = "Your first Fermyon Cloud application"
-name = "cloud_start"
-trigger = { type = "http", base = "/" }
-version = "0.1.0"
 
-[[component]]
-id = "cloud-start"
-source = "target/wasm32-wasi/release/cloud_start.wasm"
-[component.trigger]
+[[trigger.http]]
 route = "/..."
-[component.build]
+component = "cloudstart"
+
+[component.cloudstart]
+source = "target/wasm32-wasi/release/cloud_start.wasm"
+[component.cloudstart.build]
 command = "cargo build --target wasm32-wasi --release"
