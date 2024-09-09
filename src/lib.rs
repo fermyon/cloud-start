@@ -1,12 +1,11 @@
-use anyhow::Result;
 use spin_sdk::{
-    http::{Request, Response},
+    http::{IntoResponse, Response},
     http_component,
 };
 
 /// A simple Spin HTTP component.
 #[http_component]
-fn cloud_start(req: Request) -> Result<Response> {
+fn cloud_start(req: http::Request<()>) -> anyhow::Result<impl IntoResponse> {
     println!("{:?}", req.headers());
 
     let body = "
@@ -85,7 +84,9 @@ fn cloud_start(req: Request) -> Result<Response> {
     </body>
     </html>";
 
-    Ok(http::Response::builder()
+    Ok(Response::builder()
         .status(200)
-        .body(Some(body.into()))?)
+        .header("content-type", "text/html")
+        .body(body)
+        .build())
 }
