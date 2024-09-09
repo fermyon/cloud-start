@@ -1,12 +1,12 @@
 use spin_sdk::{
-    http::{IntoResponse, Request, Response},
+    http::{IntoResponse, Response},
     http_component,
 };
 
 /// A simple Spin HTTP component.
 #[http_component]
-fn cloud_start(_req: Request) -> anyhow::Result<impl IntoResponse> {
-    println!("Serving request");
+fn cloud_start(req: http::Request<()>) -> anyhow::Result<impl IntoResponse> {
+    println!("{:?}", req.headers());
 
     let body = "
     <html>
